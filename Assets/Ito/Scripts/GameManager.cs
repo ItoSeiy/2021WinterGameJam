@@ -5,15 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance => _instance;
-
-
     static GameManager _instance;
-    public List<string> ItemId { get => _itemId;}
 
 
+    public List<int> ItemId { get => _itemId;}
+    public int Score { get => _score; }
 
-    private List<string> _itemId = new List<string>();
-   
+    private List<int> _itemId = new List<int>();
+    private int _score = default;
 
     private void Awake()
     {
@@ -23,14 +22,14 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
-
+        _score = 0;
     }
 
-    public void GetItem(string itemId)
+    public void GetItem(int itemId, int score)
     {
         _itemId.Add(itemId);
-
+        _score += score;
     }
 
-
+    
 }
