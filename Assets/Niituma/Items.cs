@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDestroy : MonoBehaviour
+public class Items : MonoBehaviour
 {
     [SerializeField] float _desPosY = -5;
+    [SerializeField] int _score = 10;
+    [SerializeField] int _id = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,14 @@ public class ItemDestroy : MonoBehaviour
     {
         if (this.transform.position.y <= _desPosY)
         {
+            Destroy(this.gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            //FindObjectOfType<GameManager>().GetItem(_id,_score);
             Destroy(this.gameObject);
         }
     }
