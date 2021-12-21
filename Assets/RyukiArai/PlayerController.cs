@@ -24,16 +24,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var obj = collision.gameObject.GetComponent<Items>();
+        var obj = collision.gameObject.GetComponent<IItem>();
         switch (collision.gameObject.tag)
         {
-            case "item":
-                GameManager.Instance.GetItem(obj.Score, obj.IDs);
+            case "Item":
+                GameManager.Instance.GetItem(obj.Score, (int)obj.ID);
                 Debug.Log("Collision Item");
+                Destroy(collision.gameObject);
                 break;
-            case "bomb":
+            case "Bomb":
                 GameManager.Instance.GetItem(-100);
                 Debug.Log("Collision Bomb");
+                Destroy(collision.gameObject);
                 break;
         }
     }
