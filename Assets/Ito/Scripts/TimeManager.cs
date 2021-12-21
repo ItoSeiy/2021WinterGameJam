@@ -29,5 +29,10 @@ public class TimeManager : MonoBehaviour
         {
             _isFeverTime = true;
         }
+
+        if(_gameTimer <= 0)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }

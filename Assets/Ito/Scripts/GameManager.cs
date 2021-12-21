@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,13 +16,14 @@ public class GameManager : MonoBehaviour
     private List<int> _itemId = new List<int>();
     private int _score = default;
     private bool _isStart = false;
+    [SerializeField] TextMeshProUGUI _scoreText = null;
+    [SerializeField] GameObject _rankingPrefab = null;
 
     private void Awake()
     {
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
-
     public void GameStart()
     {
         _isStart = true;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _isStart = false;
+        Instantiate(_rankingPrefab).GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
     }
 
     /// <summary>
@@ -42,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         _itemId.Add(itemId);
         _score += score;
+        _scoreText.text = "Score:" + _score.ToString("0000");
     }
 
     /// <summary>
@@ -51,5 +55,6 @@ public class GameManager : MonoBehaviour
     public void GetItem(int score)
     {
         _score += score;
+        _scoreText.text = "Score:" + _score.ToString("0000");
     }
 }
