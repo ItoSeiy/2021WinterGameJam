@@ -244,7 +244,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 881857554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5347447a8b55b441b72d15b88b840ac, type: 3}
+  m_Script: {fileID: 11500000, guid: fbc8b477ffdc6984e9d2e5ef63301d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1020070138
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1020070140}
   - component: {fileID: 1020070139}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: SideWallR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a237969b66e41240b36c2a9f71f6752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 10
 --- !u!1 &1497267585
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 1497267587}
   - component: {fileID: 1497267586}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: SideWallL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

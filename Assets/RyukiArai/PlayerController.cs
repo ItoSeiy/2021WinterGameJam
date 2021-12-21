@@ -19,12 +19,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
-        _rb.AddForce(new Vector2(h * _moveSpeed,0));
-        _rb.AddForce(Vector2.zero);
+        Vector2 velocity = new Vector2(h,0) * _moveSpeed;
+        _rb.velocity = velocity;
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        _gm.GetItem(collision.gameObject.name);
     }
 }
