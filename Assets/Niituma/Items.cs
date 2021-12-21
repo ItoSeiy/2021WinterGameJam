@@ -25,7 +25,7 @@ public class Items : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //FindObjectOfType<GameManager>().GetItem(_id,_score);
+            FindObjectOfType<GameManager>().GetItem(_id,_score);
             Destroy(this.gameObject);
         }
     }
