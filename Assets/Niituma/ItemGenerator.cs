@@ -16,7 +16,7 @@ public class ItemGenerator : MonoBehaviour
         if (_time > _generateTime)
         {
             _time = 0;
-            Instantiate(_items[Random.Range(0,_items.Length)], this.transform.position + new Vector3(Random.Range(-8,8),0,0), Quaternion.identity);
+            Instantiate(_items[Random.Range(0,_items.Length)], this.transform.position + new Vector3(Random.Range(-5,5),0,0), Quaternion.identity);
         }
     }
 }
