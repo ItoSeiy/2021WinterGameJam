@@ -29,9 +29,11 @@ public class PlayerController : MonoBehaviour
         {
             case "item":
                 GameManager.Instance.GetItem(obj.Score, obj.IDs);
+                Debug.Log("Collision Item");
                 break;
             case "bomb":
                 GameManager.Instance.GetItem(-100);
+                Debug.Log("Collision Bomb");
                 break;
         }
     }
