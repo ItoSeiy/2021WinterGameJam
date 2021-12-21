@@ -158,7 +158,6 @@ MonoBehaviour:
     type: 3}
   _generateSpeed: 2
   _generateTime: 3
-  _time: 0
 --- !u!4 &1027915487
 Transform:
   m_ObjectHideFlags: 0
@@ -263,6 +262,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3669839886970562161, guid: cc911d501816f544eb7b804276f3a49d,
+        type: 3}
+      propertyPath: _id
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7791687432509520521, guid: cc911d501816f544eb7b804276f3a49d,
         type: 3}
       propertyPath: m_RootOrder

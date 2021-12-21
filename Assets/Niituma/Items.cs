@@ -6,7 +6,18 @@ public class Items : MonoBehaviour
 {
     [SerializeField] float _desPosY = -5;
     [SerializeField] int _score = 10;
-    [SerializeField] int _id = 0;
+    public enum ItemId
+    {
+        a,
+        b,
+        c,
+        d,
+        e
+    }
+    [SerializeField] ItemId ID;
+    public int IDs{ get => (int)ID; }
+    public int Score{ get => _score; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +36,6 @@ public class Items : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FindObjectOfType<GameManager>().GetItem(_id,_score);
             Destroy(this.gameObject);
         }
     }
