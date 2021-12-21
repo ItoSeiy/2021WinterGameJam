@@ -8,11 +8,11 @@ public class Items : MonoBehaviour
     [SerializeField] int _score = 10;
     public enum ItemId
     {
-        a,
-        b,
-        c,
-        d,
-        e
+        Id,
+        Id2,
+        Id3,
+        Id4,
+        Id5
     }
     [SerializeField] ItemId ID;
     public int IDs{ get => (int)ID; }

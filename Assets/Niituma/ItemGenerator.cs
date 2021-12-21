@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemGenerator : MonoBehaviour
 {
     [SerializeField] GameObject[] _items = default;
-    [SerializeField] GameObject _TestItem = default;
     [SerializeField] float _generateSpeed = 2f;
     [SerializeField] float _generateTime = 3f;
     float _time = 0;
