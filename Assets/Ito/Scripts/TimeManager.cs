@@ -13,6 +13,8 @@ public class TimeManager : MonoBehaviour
 
     [SerializeField] private float _gameTimer = 60f;
     [SerializeField] private float _feverTime = 10f;
+    [SerializeField] private TextMeshProUGUI _countDownUi = null;
+    [SerializeField] private float _contDownTimer = 3.5f;
     private bool _isFeverTime = false;
     private void Awake()
     {
@@ -21,16 +23,25 @@ public class TimeManager : MonoBehaviour
     private void Update()
     {
         if (!GameManager.Instance.IsStart) return;
-        _gameTimer -= Time.deltaTime;
 
-        if(_gameTimer <= _feverTime)
-        {
-            _isFeverTime = true;
-        }
+        _contDownTimer -= Time.deltaTime;
 
-        if(_gameTimer <= 0)
+        _countDownUi.text = _contDownTimer.ToString("F0");
+
+        if (_contDownTimer <= 0)
         {
-            GameManager.Instance.GameOver();
+            Destroy(_countDownUi);
+            _gameTimer -= Time.deltaTime;
+
+            if(_gameTimer <= _feverTime)
+            {
+                _isFeverTime = true;
+            }
+
+            if(_gameTimer <= 0)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
     }
 }
