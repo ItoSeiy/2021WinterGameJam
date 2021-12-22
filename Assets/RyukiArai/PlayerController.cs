@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
                 _audioSource.PlayOneShot(getSound);
                 break;
             case "Bomb":
+                _animator.SetTrigger("BeShot");
                 GameManager.Instance.GetItem(obj.Score);
                 Debug.Log("Collision Bomb");
                 Destroy(collision.gameObject);

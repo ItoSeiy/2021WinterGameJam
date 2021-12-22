@@ -11,12 +11,14 @@ public class ResultTree : MonoBehaviour
     [SerializeField] float SpawnYmin;
     [SerializeField] float SpawnYmax;
     [SerializeField] Vector2 tripos1, tripos2, tripos3;
-    List<int> itemID = GameObject.Find("GameManager").GetComponent<GameManager>().ItemId;
+    List<int> itemID = GameManager.Instance.ItemId;
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.Ranking();
         foreach(var go in itemID)
         {
+            Debug.Log(go);
             Vector2 iPos = new Vector2(Random.Range(SpawnXmin, SpawnXmax), Random.Range(SpawnYmin, SpawnYmax));//TriPos();
             var itemGo = Instantiate(items[go],iPos, Quaternion.identity,this.transform);
             itemGo.GetComponent<Rigidbody2D>().isKinematic = true;
