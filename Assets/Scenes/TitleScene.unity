@@ -5401,6 +5401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFadeOut: 1
   isFadeIn: 0
+  scenename: MainScene
 --- !u!114 &1028026826
 MonoBehaviour:
   m_ObjectHideFlags: 0
