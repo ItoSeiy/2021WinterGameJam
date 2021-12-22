@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI _scoreText = null;
+    [SerializeField] TextMeshProUGUI _gameTimer = null;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        _scoreText.text = "Score:"+ GameManager.Instance.Score.ToString("0000");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _gameTimer.text = "Time:" + TimeManager.Instance.GameTimer.ToString("F0");
     }
 }
