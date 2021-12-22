@@ -11,11 +11,11 @@ public class AuroraCoordinater : MonoBehaviour
     float _fadeSpeed;
     float _alpha;
     bool _fadeFlag;
-    Image _image;
+    SpriteRenderer _sp;
     void Start()
     {
-        _image = GetComponentInChildren<Image>();
-        _alpha = _image.color.a;
+        _sp = GetComponentInChildren<SpriteRenderer>();
+        _alpha = _sp.color.a;
         time = 0;
     }
 
@@ -34,7 +34,6 @@ public class AuroraCoordinater : MonoBehaviour
                 time = 0;
                 Debug.Log(_timeflag);
                 this.gameObject.transform.position = Apos[(int)Random.Range(0, Apos.Length)];
-                
             }
         }
         else
@@ -42,11 +41,10 @@ public class AuroraCoordinater : MonoBehaviour
             FadeIn();
         }
     }
-    //_fadeFlagがtrueのときはフェードイン
     void FadeIn()
     {
         _alpha += _fadeSpeed * Time.deltaTime;
-        _image.color = new Color(255, 255, 255, _alpha);
+        _sp.color = new Color(255, 255, 255, _alpha);
         if (_alpha >= 1)
         {
             _fadeFlag = false;
@@ -55,6 +53,6 @@ public class AuroraCoordinater : MonoBehaviour
     void FadeOut()
     {
         _alpha -= _fadeSpeed * Time.deltaTime;
-        _image.color = new Color(255, 255, 255, _alpha);
+        _sp.color = new Color(255, 255, 255, _alpha);
     }
 }
