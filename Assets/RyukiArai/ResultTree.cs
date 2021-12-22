@@ -5,13 +5,13 @@ using UnityEngine;
 public class ResultTree : MonoBehaviour
 {
     [SerializeField] GameObject[] items = default;
-    [SerializeField] int[] itemID;
+    //[SerializeField] int[] itemID;
     [SerializeField] float SpawnXmin;
     [SerializeField] float SpawnXmax;
     [SerializeField] float SpawnYmin;
     [SerializeField] float SpawnYmax;
     [SerializeField] Vector2 tripos1, tripos2, tripos3;
-    //List<int> itemID = GameObject.Find("GameManager").GetComponent<GameManager>().ItemId;
+    List<int> itemID = GameObject.Find("GameManager").GetComponent<GameManager>().ItemId;
     // Start is called before the first frame update
     void Start()
     {
