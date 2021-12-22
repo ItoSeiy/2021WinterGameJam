@@ -34,10 +34,11 @@ public class GameManager : MonoBehaviour
         _isStart = false;
         SceneLoader.Instance.LoadScene(2);
     }
-
+    GameObject _ranking;
     public void Ranking()
     {
-        Instantiate(_rankingPrefab).GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
+        _ranking = Instantiate(_rankingPrefab);
+        _ranking.GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
     }
 
     /// <summary>
