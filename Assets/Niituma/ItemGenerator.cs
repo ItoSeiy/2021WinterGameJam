@@ -8,6 +8,8 @@ public class ItemGenerator : MonoBehaviour
     [SerializeField] float _generateSpeed = 2f;
     [SerializeField] float _feverGenerateTime = 1f;
     [SerializeField] float _normalGenerateTime = 3f;
+    [SerializeField] float _spownXposMax = 5f;
+    [SerializeField] float _spownXposMin = -5f;
     float _time = 0;
 
     // Update is called once per frame
@@ -18,7 +20,7 @@ public class ItemGenerator : MonoBehaviour
         if (_time > GenerateTime)
         {
             _time = 0;
-            Instantiate(_items[Random.Range(0,_items.Length)], this.transform.position + new Vector3(Random.Range(-5,5),0,0), Quaternion.identity);
+            Instantiate(_items[Random.Range(0,_items.Length)], this.transform.position + new Vector3(Random.Range(_spownXposMin, _spownXposMax),0,0), Quaternion.identity);
         }
     }
 }
