@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candy : ItemBase, IItem
+public class Candy : ItemBase
 {
-    public ItemID ID => ItemID.Candy;
-
-    public int Score => 2;
+    
 }
