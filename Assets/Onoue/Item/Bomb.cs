@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bomb : ItemBase, IItem
+public class Bomb : ItemBase
 {
-    public ItemID ID => ItemID.Bomb;
-    public int Score => -1;
+    
 }
