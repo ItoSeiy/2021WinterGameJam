@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     private List<int> _itemId = new List<int>();
     private int _score = default;
     private bool _isStart = false;
-    [SerializeField] TextMeshProUGUI _scoreText = null;
     [SerializeField] GameObject _rankingPrefab = null;
 
     private void Awake()
@@ -45,7 +44,6 @@ public class GameManager : MonoBehaviour
     {
         _itemId.Add(itemId);
         _score += score;
-        _scoreText.text = "Score:" + _score.ToString("0000");
     }
 
     /// <summary>
@@ -55,6 +53,5 @@ public class GameManager : MonoBehaviour
     public void GetItem(int score)
     {
         _score += score;
-        _scoreText.text = "Score:" + _score.ToString("0000");
     }
 }
