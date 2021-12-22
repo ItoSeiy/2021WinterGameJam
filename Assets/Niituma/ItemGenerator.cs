@@ -15,6 +15,8 @@ public class ItemGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsStart) return;
+
         float GenerateTime = TimeManager.Instance.IsFeverTime ? _feverGenerateTime : _normalGenerateTime;
         _time += _generateSpeed * Time.deltaTime;
         if (_time > GenerateTime)

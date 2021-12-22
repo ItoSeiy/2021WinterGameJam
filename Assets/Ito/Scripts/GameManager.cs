@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public List<int> ItemId { get => _itemId;}
     public int Score { get => _score; }
-    public bool IsStart { get => _isStart; }
+    public bool IsStart { get => _isStart; set => _isStart = value; }
 
     private List<int> _itemId = new List<int>();
     private int _score = default;
@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _isStart = false;
+        SceneLoader.Instance.LoadScene(2);
+    }
+
+    public void Ranking()
+    {
         Instantiate(_rankingPrefab).GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
     }
 

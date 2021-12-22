@@ -26,22 +26,19 @@ public class TimeManager : MonoBehaviour
 
         _contDownTimer -= Time.deltaTime;
 
-        _countDownUi.text = _contDownTimer.ToString("F0");
+        //_countDownUi.text = _contDownTimer.ToString("F0");
 
-        if (_contDownTimer <= 0)
+        Destroy(_countDownUi);
+        _gameTimer -= Time.deltaTime;
+
+        if(_gameTimer <= _feverTime)
         {
-            Destroy(_countDownUi);
-            _gameTimer -= Time.deltaTime;
+            _isFeverTime = true;
+        }
 
-            if(_gameTimer <= _feverTime)
-            {
-                _isFeverTime = true;
-            }
-
-            if(_gameTimer <= 0)
-            {
-                GameManager.Instance.GameOver();
-            }
+        if(_gameTimer <= 0)
+        {
+            GameManager.Instance.GameOver();
         }
     }
 }

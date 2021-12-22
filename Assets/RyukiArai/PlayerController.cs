@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsStart) return;
+
         float h = Input.GetAxisRaw("Horizontal");
         Vector2 velocity = new Vector2(h,0) * _moveSpeed;
         _rb.velocity = velocity;
