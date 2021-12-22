@@ -11,7 +11,6 @@ public class TimeManager : MonoBehaviour
     public float GameTimer { get => _gameTimer; }
     public bool IsFeverTime { get => _isFeverTime; }
 
-    [SerializeField] private TextMeshProUGUI _timeText = null;
     [SerializeField] private float _gameTimer = 60f;
     [SerializeField] private float _feverTime = 10f;
     private bool _isFeverTime = false;
@@ -23,7 +22,6 @@ public class TimeManager : MonoBehaviour
     {
         if (!GameManager.Instance.IsStart) return;
         _gameTimer -= Time.deltaTime;
-        _timeText.text = _gameTimer.ToString("F0");
 
         if(_gameTimer <= _feverTime)
         {
