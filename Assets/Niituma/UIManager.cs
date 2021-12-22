@@ -10,8 +10,8 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        _scoreText.text = "Score:"+ GameManager.Instance.Score.ToString("0000");
+        _scoreText.text = GameManager.Instance.Score.ToString("0000");
 
-        _gameTimer.text = "Time:" + TimeManager.Instance.GameTimer.ToString("F0");
+        _gameTimer.text = TimeManager.Instance.GameTimer.ToString("F0");
     }
 }

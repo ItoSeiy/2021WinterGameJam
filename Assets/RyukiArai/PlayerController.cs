@@ -7,12 +7,17 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D _rb;
     Animator _animator;
     [SerializeField] float _moveSpeed;
+    public AudioClip getSound;
+    public AudioClip BombSound;
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,11 +40,13 @@ public class PlayerController : MonoBehaviour
                 GameManager.Instance.GetItem(obj.Score, (int)obj.ID);
                 Debug.Log("Collision Item");
                 Destroy(collision.gameObject);
+                _audioSource.PlayOneShot(getSound);
                 break;
             case "Bomb":
                 GameManager.Instance.GetItem(obj.Score);
                 Debug.Log("Collision Bomb");
                 Destroy(collision.gameObject);
+                _audioSource.PlayOneShot(BombSound);
                 break;
         }
     }
