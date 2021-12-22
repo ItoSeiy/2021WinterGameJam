@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Star : ItemBase, IItem
+public class Star : ItemBase
 {
-    public ItemID ID => ItemID.Star;
-    public int Score => 4;
+    
 }
