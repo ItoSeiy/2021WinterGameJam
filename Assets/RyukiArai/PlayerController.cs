@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(collision.gameObject);
                 break;
             case "Bomb":
-                GameManager.Instance.GetItem(-100);
+                GameManager.Instance.GetItem(obj.Score);
                 Debug.Log("Collision Bomb");
                 Destroy(collision.gameObject);
                 break;
