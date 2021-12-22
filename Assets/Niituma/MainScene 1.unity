@@ -734,7 +734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc8b477ffdc6984e9d2e5ef63301d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreText: {fileID: 1175176810}
   _rankingPrefab: {fileID: 1120261626254757977, guid: b74bd57e26256984b9918d3252a1804d,
     type: 3}
 --- !u!4 &1104872899
@@ -913,7 +912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5b227b76cee1e48bf8259aa5294eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeText: {fileID: 867906420}
   _gameTimer: 60
   _feverTime: 10
 --- !u!4 &1283725382
@@ -1223,7 +1221,8 @@ MonoBehaviour:
   - {fileID: 483540268439599928, guid: 9b3dd9ee94432ed489c04724aaeca654, type: 3}
   - {fileID: 4467346662888978761, guid: b786947aea9141843893b8d3ce668757, type: 3}
   _generateSpeed: 2
-  _generateTime: 3
+  _feverGenerateTime: 1
+  _normalGenerateTime: 3
 --- !u!4 &1586153155
 Transform:
   m_ObjectHideFlags: 0

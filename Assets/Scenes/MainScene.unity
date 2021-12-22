@@ -689,7 +689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc8b477ffdc6984e9d2e5ef63301d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreText: {fileID: 1175176810}
   _rankingPrefab: {fileID: 1120261626254757977, guid: b74bd57e26256984b9918d3252a1804d,
     type: 3}
 --- !u!4 &1104872899
@@ -868,7 +867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5b227b76cee1e48bf8259aa5294eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeText: {fileID: 867906420}
   _gameTimer: 60
   _feverTime: 10
 --- !u!4 &1283725382
@@ -1411,6 +1409,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u30EA\u30FC\u30B9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160775585507382585, guid: 4d48660999f92ed42b56654c945ca462,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9063079
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160775585507382585, guid: 4d48660999f92ed42b56654c945ca462,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.42261827
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160775585507382585, guid: 4d48660999f92ed42b56654c945ca462,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d48660999f92ed42b56654c945ca462, type: 3}
