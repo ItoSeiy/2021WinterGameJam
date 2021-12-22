@@ -18,7 +18,7 @@ public class ResultTree : MonoBehaviour
         foreach(var go in itemID)
         {
             Vector2 iPos = new Vector2(Random.Range(SpawnXmin, SpawnXmax), Random.Range(SpawnYmin, SpawnYmax));//TriPos();
-            var itemGo = Instantiate(items[go],iPos, Quaternion.identity);
+            var itemGo = Instantiate(items[go],iPos, Quaternion.identity,this.transform);
             itemGo.GetComponent<Rigidbody2D>().isKinematic = true;
         }
     }

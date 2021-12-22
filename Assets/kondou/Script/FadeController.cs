@@ -65,4 +65,9 @@ public class FadeController : MonoBehaviour
 
 	}
 
+	public void SetFadeBool()
+    {
+		isFadeOut = true;
+    }
+
 }
