@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/kondou/seane/TitleScene.unity
+    guid: ad015ba65a39d644abb722551d65cd47
+  - enabled: 1
+    path: Assets/kondou/seane/GameScene.unity
+    guid: 5eb40cfde0759a648b2aff08dfdb609c
+  - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: 1bf45b81d540e7b4c8fc10947258dd9e
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: ec1d194dd20ee094fb69e6e9cd44a00c
   m_configObjects: {}
