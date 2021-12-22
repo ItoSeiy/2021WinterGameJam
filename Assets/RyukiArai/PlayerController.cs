@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var obj = collision.gameObject.GetComponent<IItem>();
+        var obj = collision.gameObject.GetComponent<ItemBase>();
         switch (collision.gameObject.tag)
         {
             case "Item":

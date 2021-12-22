@@ -5,14 +5,19 @@ using UnityEngine;
 public class ResultTree : MonoBehaviour
 {
     [SerializeField] GameObject[] items = default;
-
-    List<int> itemID = GameObject.Find("GameManager").GetComponent<GameManager>().ItemId;
+    [SerializeField] int[] itemID;
+    [SerializeField] float SpawnXmin;
+    [SerializeField] float SpawnXmax;
+    [SerializeField] float SpawnYmin;
+    [SerializeField] float SpawnYmax;
+    //List<int> itemID = GameObject.Find("GameManager").GetComponent<GameManager>().ItemId;
     // Start is called before the first frame update
     void Start()
     {
         foreach(var go in itemID)
         {
-            Instantiate(items[go],new Vector3(Random.Range(-10,10), Random.Range(5,10),0),transform.rotation.normalized);
+            Instantiate(items[go],new Vector3(Random.Range(SpawnXmin,SpawnXmax), Random.Range(SpawnYmin,SpawnYmax),0), Quaternion.identity);
+            var _rb = items[go].GetComponent<Rigidbody2D>().isKinematic = true;
         }
     }
 }
