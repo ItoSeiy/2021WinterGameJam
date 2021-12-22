@@ -15,6 +15,8 @@ public class FadeController : MonoBehaviour
 
 	Image fadeImage;                //透明度を変更するパネルのイメージ
 
+
+	[SerializeField] string scenename;
 	public void Start()
 	{
 		fadeImage = GetComponent<Image>();
@@ -56,6 +58,7 @@ public class FadeController : MonoBehaviour
 		if (alfa >= 1)
 		{             // d)完全に不透明になったら処理を抜ける
 			isFadeOut = false;
+			SceneLoader.Instance.LoadScene(scenename);
 		}
 	}
 
